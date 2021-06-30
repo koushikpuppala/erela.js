@@ -1,0 +1,60 @@
+{
+  "name": "@koushikpuppala/erela.js",
+  "version": "2.0.0",
+  "description": "A fork of erela.js with some small adjustments.",
+  "main": "dist/index.js",
+  "types": "typings/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koushikpuppala/erela.js.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "types": "dts-bundle --removeSource --name erela.js --main ./dist --out ../typings/index.d.ts --baseDir ./dist",
+    "docs": "typedoc --out ./docs --hideBreadcrumbs --theme vuepress --mode file --excludeProtected --excludePrivate src/structures"
+  },
+  "keywords": [
+    "lavalink",
+    "lavalink client",
+    "music"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "@types/ws": "^6.0.4",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "dts-bundle": "^0.7.3",
+    "eslint": "^7.0.0",
+    "tslint": "^5.20.1",
+    "typedoc": "^0.15.8",
+    "typedoc-plugin-markdown": "^2.2.17",
+    "typedoc-plugin-no-inherit": "^1.1.10",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "@discordjs/collection": "^0.1.5",
+    "axios": "^0.19.2",
+    "ws": "^7.2.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/koushikpuppala/erela.js/issues"
+  },
+  "homepage": "https://github.com/koushikpuppala/erela.js#readme",
+  "author": "Koushikpuppala",
+  "license": "MIT"
+}
